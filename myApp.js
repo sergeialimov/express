@@ -8,7 +8,9 @@ app.use(function(req, res, next){
 });
 
 // --> 11)  Mount the body-parser middleware  here
-
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(urlencodedParser);
 
 /** 1) Meet the node console. */
 console.log(__dirname);
